@@ -158,3 +158,21 @@ body {
     background-color: #555555;
     height: 227px;
 }
+
+/* Latest funding news */
+
+.latest-fundings {
+    grid-column: 2;
+    display: grid;
+    grid-template-columns: repeat(4, minmax(270px, 224px));
+    grid-gap: 24px;
+}
+
+.latest-funding-header {
+    grid-column: 1 / -1;
+}
+
+.latest-funding {
+    height: 250px;
+    background-color: #555555;
+}
