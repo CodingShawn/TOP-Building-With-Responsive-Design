@@ -195,3 +195,21 @@ body {
     height: 675px;
     background-color: #555555;
 }
+
+/* Latest deals styling */
+
+.latest-deals {
+    grid-column-start: 2;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+    grid-gap: 12px;
+}
+
+.latest-deals-header {
+    grid-column: 1 / -1;
+}
+
+.latest-deal {
+    height: 261px;
+    background-color: #555555;
+}
