@@ -213,3 +213,22 @@ body {
     height: 261px;
     background-color: #555555;
 }
+
+/* Page footer styling */
+
+.page-footer {
+    display: grid;
+    grid-template-columns: 1fr;
+}
+
+.footer-links {
+    height: 91px;
+    padding: 42px 0 28px 0;
+    background-color: #191919;
+}
+
+.footer-legal {
+    height: 19px;
+    padding: 39px 0;
+    background-color: black;
+}
