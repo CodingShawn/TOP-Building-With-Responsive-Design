@@ -139,12 +139,17 @@ body {
     grid-template-columns: 1fr minmax(150px, 1192px) 1fr;
     padding: 0 20px;
 }
+
+.wrapper > * {
+    margin: 28px 0px;
+}
+
 /* Latest news styling */
 
 .latest-news {
     grid-column-start: 2;
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(225px, 270px));
+    grid-template-columns: repeat(auto-fit, minmax(225px, 1fr));
     grid-gap: 24px;
 }
 
@@ -164,7 +169,7 @@ body {
 .latest-fundings {
     grid-column: 2;
     display: grid;
-    grid-template-columns: repeat(4, minmax(270px, 224px));
+    grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
     grid-gap: 24px;
 }
 
@@ -174,5 +179,19 @@ body {
 
 .latest-funding {
     height: 250px;
+    background-color: #555555;
+}
+
+/* Articles styling */
+
+.articles {
+    grid-column-start: 2;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(305px, 1fr));
+    grid-gap: 24px;
+}
+
+.article {
+    height: 675px;
     background-color: #555555;
 }
