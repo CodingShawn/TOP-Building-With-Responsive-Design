@@ -49,9 +49,18 @@ table {
 
 /* Own styling starts here */
 
+* {
+    box-sizing: border-box;
+}
+
 body {
+    font-family: Helvetica;
     display: grid;
     grid-template-columns: 1fr;
+}
+
+.white {
+    color: white;
 }
 
 .main-nav {
@@ -62,13 +71,26 @@ body {
     "topic-nav";
 }
 
+.logo {
+    display: none;
+    grid-area: page-logo;
+    background-color: black;
+    width: 106px;
+    height: 80px;
+    padding: 16px 20px;
+}
+
 .page-nav {
+    grid-area: page-nav;
     background-color: #131313;
+    color: rgba(255, 255, 255, 0.6);
     display: flex;
     justify-content: space-between;
     align-content: center;
     max-height: 32px;
     height: 32px;
+    font-size: 13px;
+    font-weight: 500;
 }
 
 .page-links {
@@ -81,17 +103,21 @@ body {
 }
 
 .page-link {
-    height: 16px;
-    width: 45px;
-    background-color: white;
     margin-left: 12px;
+}
+
+.page-link:hover {
+    cursor: pointer;
+    color: white;
 }
 
 /* Second nav bar  */
 
 .topic-nav {
+    grid-area: topic-nav;
     display: flex;
     justify-content: space-between;
+    color: #aaa;
 }
 
 .topic-links {
@@ -99,18 +125,117 @@ body {
 }
 
 .topic-link {
-    width: 78px;
-    height: 48px;
-    background-color: #555555;
-    margin: 18px 12px ;
+    padding: 18px 12px 0 12px;
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.topic-link:hover {
+    color: #131313;
+    cursor: pointer;
 }
 
 .search-glass {
     height: 48px;
     width: 48px;
-    background-color: #555555;
-    margin: 18px 12px ;
+    padding: 16px;
+    border-left: 1px solid #eeeeee;
+}
 
+.search-glass-img {
+    display: block;
+    background: transparent url(https://cdn0.tnwcdn.com/wp-content/themes/cyberdelia/assets/img/icons-sprite.svg?1520429355783) no-repeat;
+    height: 16px;
+    width: 16px;
+    background-position: -848px -848px;
+}
+
+.menu {
+    display: none;
+}
+
+
+@media screen and (max-width: 1024px){
+    .main-nav {
+        grid-template-columns: auto 1fr;
+        grid-template-areas: 
+        "page-logo page-nav"
+        "page-logo topic-nav";
+    }
+    
+    .logo {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .logo img {
+        display: block;
+        width: 66px;
+        height: 16px;
+    }
+}
+
+@media screen and (max-width: 1212px) {
+    .hide {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .main-nav {
+        grid-template-areas: 
+        "page-logo topic-nav";
+    }
+
+    .page-nav {
+        display: none;
+    }
+
+    .topic-nav {
+        justify-content: flex-end;
+    }
+
+    .logo {
+        width: 106px;
+        height: 48px;
+    }
+
+    .menu {
+        display: block;
+        border-left: 1px solid #eeeeee;
+    }
+
+    .menu a {
+        position: relative;
+        display: block;
+        height: 48px;
+        width: 48px;
+        padding: 16px;
+    }
+
+    .menu span {
+        background-color: #f42;
+        display: block;
+        height: 2px;
+        width: 20px;
+        left: 14px;
+        position: absolute;
+        top: 50%;
+        margin-top: -1px;
+    }
+
+    .menu span:first-child {
+        transform: translateY(-6px);
+    }
+
+    .menu span:last-child {
+        transform: translateY(6px);
+    }
+
+    .topic-links {
+        display: none;
+    }
 }
 
 /* Cover story styling */
