@@ -81,6 +81,7 @@ body {
 }
 
 .page-nav {
+    padding: 0 12px;
     grid-area: page-nav;
     background-color: #131313;
     color: rgba(255, 255, 255, 0.6);
@@ -114,6 +115,7 @@ body {
 /* Second nav bar  */
 
 .topic-nav {
+    padding-left: 12px;
     grid-area: topic-nav;
     display: flex;
     justify-content: space-between;
@@ -240,21 +242,94 @@ body {
 
 /* Cover story styling */
 
-.cover {
+.cover-stories {
     display: grid;
     grid-template-columns: 2fr 1fr;
     grid-template-rows: 1fr 1fr;
-    height: 930px;
+    height: 544px;
+    cursor: pointer;
 }
 
 .main-cover-story {
     grid-column-start: 1;
     grid-row: 1 / -1;
+    position: relative;
 }
 
 .cover-story {
-    background-color: #555555;
     border: white 1px solid;
+    background-image: url("https://cdn0.tnwcdn.com/wp-content/blogs.dir/1/files/2020/10/Untitled-design-2020-10-16T114024.500-796x417.png");
+    background-size: cover;
+    background-position: 50%;
+    opacity: 1;
+    transition: 0.5s;
+}
+
+.cover-story:hover {
+    filter: brightness(110%);
+}
+
+.cover-story-cover {
+    background: url(https://cdn0.tnwcdn.com/wp-content/themes/cyberdelia/assets/img/image-gradient.png) no-repeat;
+    background-size: 100% 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 20px 16px;
+}
+
+.cover-header {
+    color: white;
+}
+
+.cover-header > * {
+    margin-top: 7px;
+}
+
+.cover-topic {
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.cover-title {
+    font-size: 28px;
+    font-weight: 700;
+}
+
+.cover-byline {
+    display: flex;
+    font-size: 12px;
+    opacity: 0.6;
+}
+
+.cover-byline li {
+    padding: 7px 2px;
+}
+
+.main-cover-title {
+    font-size: 56px;
+    font-weight: 700;
+}
+
+.cover-wrapper {
+    background: transparent url(https://cdn0.tnwcdn.com/wp-content/themes/cyberdelia/assets/img/cover-gradient.png) no-repeat;
+    background-size: cover;
+    width: 100%;
+    height: 100%;
+    mix-blend-mode: lighten;
+    position: absolute;
+}
+
+.cover-logo {
+    background: transparent url(https://cdn0.tnwcdn.com/wp-content/themes/cyberdelia/assets/img/tnw.svg) no-repeat;
+    height: 100%;
+    max-height: 112px;
+    width: 50%;
+}
+
+.mini-cover-story {
+    justify-content: flex-end;
 }
 
 /* Wrapper styling */
