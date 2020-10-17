@@ -386,27 +386,124 @@ body {
 }
 
 .wrapper > * {
-    margin: 28px 0px;
+    margin-top: 28px;
 }
 
 /* Latest news styling */
 
 .latest-news {
     grid-column-start: 2;
+}
+
+.latest-news-wrapper {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(225px, 1fr));
+    grid-template-rows: repeat(2, minmax(205px, 270px));
     grid-gap: 24px;
 }
 
 .latest-news-header {
-    width: 164;
     grid-column: 1 / -1;
-    margin: 24px 0;
 }
 
 .latest-news-article {
-    background-color: #555555;
-    height: 227px;
+    max-width: 270px;
+    font-weight: 700;
+    line-height: 20px;
+}
+
+.latest-news-title {
+    padding-top: 8px;
+}
+
+.latest-news-image {
+    background-image: url("https://cdn0.tnwcdn.com/wp-content/blogs.dir/1/files/2020/10/RankTools-540x270.jpg");
+    width: 100%;
+    height: 50%;
+    display: block;
+    background-position: 50%;
+    background-size: cover;
+}
+
+.latest-news-article:nth-of-type(2) .latest-news-image{
+    background-image: url("https://cdn0.tnwcdn.com/wp-content/blogs.dir/1/files/2020/10/Untitled-design-2020-10-16T114024.500-516x270.png");
+}
+
+.latest-news-article:nth-of-type(3) .latest-news-image{
+    background-image: url("https://cdn0.tnwcdn.com/wp-content/blogs.dir/1/files/2017/02/Screen-Shot-2017-02-13-at-14.04.49-537x270.jpg");
+}
+
+.latest-news-article:nth-of-type(4) .latest-news-image{
+    background-image: url("https://cdn0.tnwcdn.com/wp-content/blogs.dir/1/files/2020/06/iOS-14-hidden-features-516x270.jpg");
+}
+
+.latest-news-article:nth-of-type(5) .latest-news-image{
+    background-image: url("https://cdn0.tnwcdn.com/wp-content/blogs.dir/1/files/2020/10/image-4-3-516x270.png");
+}
+
+.latest-news-article:nth-of-type(6) .latest-news-image{
+    background-image: url("https://cdn0.tnwcdn.com/wp-content/blogs.dir/1/files/2020/10/image-8-2-516x270.png");
+}
+
+.latest-news-article:nth-of-type(7) .latest-news-image{
+    background-image: url("https://cdn0.tnwcdn.com/wp-content/blogs.dir/1/files/2020/10/creativity-gq-516x270.png");
+}
+
+.latest-news-article:nth-of-type(8) .latest-news-image{
+    background-image: url("https://cdn0.tnwcdn.com/wp-content/blogs.dir/1/files/2020/10/462246-e316e9734c0939def7117c43add64f05-e1602565656843-796x420.jpg");
+}
+
+.latest-news-byline {
+    padding-top: 4px;
+    color: #aaa;
+    font-size: 13px;
+    font-weight: 400;
+    display: flex;
+}
+
+.latest-news-byline :nth-child(1)::after {
+    content: "\B7";
+    display: block;
+    float: right;
+    margin: 0 4px;
+}
+
+@media screen and (max-width: 1024px) {
+    .latest-news-wrapper {
+        grid-template-rows: repeat(3, minmax(205px, 270px));
+    }
+}
+
+@media screen and (max-width: 780px) {
+    .latest-news-wrapper {
+        grid-template-columns: 1fr;
+        grid-template-rows: none;
+    }
+
+
+    .latest-news-article {
+        max-width: 100%;
+        display: grid;
+        grid-template-columns: 75px 1fr;
+        grid-column-gap: 8px;
+        align-content: start;
+    }
+
+    .latest-news-image {
+        width: 75px;
+        height: 75px;
+        grid-row: 1 / span 3;
+    }
+
+    .latest-news-title {
+        padding: 0;
+    }
+
+    .latest-news-byline {
+        padding: 0;
+        grid-column-start: 2;
+    }
+
 }
 
 /* Latest funding news */
