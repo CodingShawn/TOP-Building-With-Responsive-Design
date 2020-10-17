@@ -63,6 +63,14 @@ body {
     color: white;
 }
 
+.wrapper section h2 {
+    color: #f42;
+    font-weight: 700;
+    font-size: 28px;
+    font-family: sans-serif;
+}
+/* Page hearder styling */
+
 .main-nav {
     display: grid;
     grid-template-rows: auto auto;
@@ -246,8 +254,10 @@ body {
     display: grid;
     grid-template-columns: 2fr 1fr;
     grid-template-rows: 1fr 1fr;
+    grid-gap: 4px;
     height: 544px;
     cursor: pointer;
+    padding: 4px;
 }
 
 .main-cover-story {
@@ -263,6 +273,14 @@ body {
     background-position: 50%;
     opacity: 1;
     transition: 0.5s;
+}
+
+.cover-story:nth-of-type(2) {
+    background-image: url("https://cdn0.tnwcdn.com/wp-content/blogs.dir/1/files/2020/10/image-1-8-796x417.png");
+}
+
+.cover-story:nth-of-type(3) {
+    background-image: url("https://cdn0.tnwcdn.com/wp-content/blogs.dir/1/files/2020/10/tnw2020-feature_img-02.jpg");
 }
 
 .cover-story:hover {
@@ -330,6 +348,33 @@ body {
 
 .mini-cover-story {
     justify-content: flex-end;
+}
+
+@media screen and (max-width: 1024px) {
+    .cover-wrapper {
+        display: none;
+    }
+    .cover-logo {
+        display: none;
+    }
+    .cover-story-cover {
+        justify-content: flex-end;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .cover-stories {
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(3, 277px);
+        height: 831px;
+    }
+    .main-cover-story {
+        grid-row: 1 / span 1;
+    }
+
+    .main-cover-title {
+        font-size: 28px;
+    }
 }
 
 /* Wrapper styling */
