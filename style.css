@@ -511,18 +511,134 @@ body {
 .latest-fundings {
     grid-column: 2;
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
     grid-gap: 24px;
 }
 
-.latest-funding-header {
+.latest-fundings-header {
     grid-column: 1 / -1;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
-.latest-funding {
-    height: 250px;
-    background-color: #555555;
+
+.latest-fundings-links {
+    color: #f42;
+    font-size: 16px;
+    display: flex;
 }
+
+.latest-fundings-link {
+    border-right: 1px #f42 solid;
+    padding: 0 12px;
+}
+
+.latest-fundings-link:last-of-type {
+    border: none;
+    padding-right: 0;
+}
+
+
+.latest-funding {
+    background: #fffaf8;
+}
+
+.funded-company {
+    position: relative;
+    font-family: sans-serif;
+}
+
+.funded-company-img {
+    width: 60px;
+    height: 60px;
+    position: absolute;
+    margin: 10px;
+}
+
+.funded-company-name {
+    background-color: #f42;
+    color: white;
+    font-weight: 700;
+    font-size: 18px;
+    padding: 10px 16px 10px 84px;
+    white-space: nowrap;
+}
+
+.funded-amount {
+    background: rgba(255,68,34,.08);
+    padding: 10px 16px 10px 84px;
+    line-height: 1.25;
+
+}
+
+.funded-amount p:first-child {
+    font-weight: 700;
+}
+
+.funded-amount p:last-child {
+    font-size: 12px;
+    color: #000;
+    opacity: 0.5;
+}
+
+.funded-company-tag-wrapper {
+    padding: 16px;
+    font-weight: 400;
+    color: #555;
+    font-size: 13px;
+    line-height: 22px;
+}
+
+.funded-company-tag {
+    margin-bottom: 6.5px;
+}
+
+.funding-news {
+    padding: 10px 16px 16px 16px;
+    font-weight: 400;
+    color: #555;
+    font-size: 12px;
+    line-height: 22px;
+    border-top: 1px rgba(255, 68, 34, 0.25) solid;
+}
+
+.funding-news span {
+    color: #aaa;
+}
+
+@media screen and (max-width: 1024px) {
+    .latest-fundings {
+        grid-template-columns: repeat(3, minmax(220px, 1fr));
+    }
+
+    .latest-funding:last-child {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .latest-fundings {
+        grid-template-columns: 1fr;
+    }
+
+    .latest-fundings-header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .latest-fundings-links {
+        flex-direction: column;
+    }
+
+    .latest-fundings-link {
+        border: none;
+        padding: 0;
+        margin-top: 11px;
+        font-size: 14px;
+    }
+}
+
 
 /* Articles styling */
 
