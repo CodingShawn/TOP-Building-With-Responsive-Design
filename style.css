@@ -802,8 +802,9 @@ body {
 
 .footer-social-links {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     margin-bottom: 21px;
+    flex-wrap: wrap;
 }
 
 .footer-social-link {
@@ -864,6 +865,8 @@ body {
     color: #aaa;
     font-size: 14px;
     cursor: pointer;
+    flex-wrap: wrap;
+    justify-content: center;
 }
 
 .footer-menu-link:hover {
