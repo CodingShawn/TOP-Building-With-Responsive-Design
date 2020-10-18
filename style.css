@@ -648,6 +648,7 @@ body {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(305px, 1fr));
     grid-gap: 24px;
+    margin-bottom: 40px;
 }
 
 .article-header {
@@ -784,25 +785,6 @@ body {
     }
 }
 
-
-/* Latest deals styling */
-
-.latest-deals {
-    grid-column-start: 2;
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
-    grid-gap: 12px;
-}
-
-.latest-deals-header {
-    grid-column: 1 / -1;
-}
-
-.latest-deal {
-    height: 261px;
-    background-color: #555555;
-}
-
 /* Page footer styling */
 
 .page-footer {
@@ -811,9 +793,85 @@ body {
 }
 
 .footer-links {
-    height: 91px;
-    padding: 42px 0 28px 0;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
     background-color: #191919;
+    padding: 42px 0 28px 0;
+}
+
+.footer-social-links {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 21px;
+}
+
+.footer-social-link {
+    display: block;
+    background: #333;
+    border-radius: 50%;
+    height: 40px;
+    width: 40px;
+    display: grid;
+    place-items: center;
+    margin: 0 8px;
+    cursor: pointer;
+}
+
+.footer-social-link:hover {
+    background: transparent;
+    box-shadow: 0 0 0 2px #333;
+}
+
+.icon {
+    display: block;
+    background: transparent url(https://cdn0.tnwcdn.com/wp-content/themes/cyberdelia/assets/img/icons-sprite.svg?1520429355783) no-repeat;
+    background-size: 1296px 1296px;
+    height: 16px;
+    width: 16px;
+}
+
+.facebook {
+    background-position: -272px -272px;
+}
+
+.twitter {
+    background-position: -1024px -1024px;
+}
+
+.youtube {
+    background-position: -1280px -1280px;
+}
+
+.insta {
+    background-position: -416px -416px;
+}
+
+.pinterest {
+    background-position: -672px -672px;
+}
+
+.rss {
+    background-position: -816px -816px;
+}
+
+.email {
+    background-position: -576px -576px;
+}
+
+.footer-menu-links {
+    display: flex;
+    color: #aaa;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+.footer-menu-link:hover {
+    color: white;
+}
+
+.footer-menu-link {
+    margin: 0 6px;
 }
 
 .footer-legal {
