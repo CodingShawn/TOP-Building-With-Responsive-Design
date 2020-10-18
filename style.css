@@ -878,7 +878,19 @@ body {
 }
 
 .footer-legal {
-    height: 19px;
     padding: 39px 0;
     background-color: black;
+    display: flex;
+    justify-content: center;
+    justify-items: center;
+}
+
+.footer-legal-desc {
+    color: #aaa;
+    font-size: 13px;
+}
+
+.footer-legal-desc img {
+    display: inline-block;
+    height: 9px;
 }
